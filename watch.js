@@ -1,12 +1,10 @@
 let hora = document.getElementById("hour");
-let minuto = document.getElementById("min");
 
 setInterval(
     ()=>{
         let tiempo = new Date();
-        hora.innerText = tiempo.getHours();
-        minuto.innerText = tiempo.getMinutes();
-        console.log(`${hora.getHours()}:${hora.getMinutes()}`)
+        hora.innerText = tiempo.toLocaleTimeString();
+        console.log(`${hora.toLocaleTimeString()}}`)
     }, 1000
 )
 
