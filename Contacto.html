@@ -4,18 +4,65 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="shortcut icon" href="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/4379ea94-c866-4f3a-a5e6-34b4d116f2d8/d9td8pd-d8ccea13-3e1a-4aaa-ab23-5177da12b412.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzQzNzllYTk0LWM4NjYtNGYzYS1hNWU2LTM0YjRkMTE2ZjJkOFwvZDl0ZDhwZC1kOGNjZWExMy0zZTFhLTRhYWEtYWIyMy01MTc3ZGExMmI0MTIucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.wmyJp9A-kOQJGnmkgxH8uGlSnEBjCEUFO9Gw8_Zee88">
+    <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 <body>
-    <a href="./index.html">Home</a>
-    <a href="#">Contact me</a>
-    <a href="./Trabajos.html">Works</a>
+    <nav id="barra" class="bg-[#86cecb] justify-end flex h-[100px] pt-8 pr-4 text-[#e12885] text-3xl max-sm:text-sm  max-md:text-lg max-lg:text-xl max-sm:h-[50px] max-md:h-[60px] max-sm:pr-0 max-md:pr-0 max-sm:pt-4 max-md:pt-4 max-sm:justify-center max-md:justify-center">
+        <button id="botonTema" class="dark pr-8 h-[44px]"><img id="icon" class="pr-8 h-[44px]" src="./image/moonpng.parspng.com-3.png" alt=""></button>
+        <a class="pr-8 h-[44px] max-sm:h-[6px]" href="./index.html">Home</a>
+        <a class="pr-8 h-[44px]" href="#">Contact me</a>
+        <a class="pr-8 h-[44px]" href="./Trabajos.html">Works</a>
+    </nav>
+    <div id="medio" class="text-[#373b3e] bg-[#bec8d1] h-screen flex flex-col items-center justify-center">
+        <img id="fondo" class="object-cover absolute mix-blend-overlay animate__animated animate__jello" src="./image/mikuchibi.png" alt="">
+        <div class="container ml-auto mr-auto border flex flex-col content-center">
+                <div class="items-center flex flex-col justify-center">
+                    <p class="text-7xl">Alfredo Tartaret</p>
+                    <p class="text-3xl">Ingrese los datos para contactarme</p>
+                </div>
+            <div class="">
+                <form class=" mt-8 flex flex-col items-center gap-0.5" action="">
+                    <div class="mb-4">
+                        <label for="nombre">Nombre:</label>          
+                        <input type="text" id="nombre" name="nombre_usuario">
+                    </div>
+                    <div>
+                        <label for="apellido">Apellido:</label>
+                        <input type="text" id="apellido" name="apellido_usuario">
+                    </div>
+                    <div>
+                        <label for="telefono">Telefono:</label>
+                        <input type="number" id="telefono" name="telefono_usuario">
+                    </div>
+                    <div>
+                        <label for="direccion">Direccion:</label>
+                        <input type="text" id="direccion" name="direccion_usuario">
+                    </div>
+                    <div>
+                        <label for="asunto">Asunto:</label>
+                      <textarea name="asunto_usuario" id="asunto"></textarea>
+                    </div>
+                    <button class="border" type="submit">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
     
-    
-<footer>
-    <a href="./index.html">Home</a>
-    <a href="#">Contact me</a>
-    <a href="./Trabajos.html">Works</a>
-</footer>
+    <footer id="pie" class="bg-[#137a7f] h-[200px] pt-16 text-[#e12885] text-4xl max-sm:text-sm max-md:text-lg max-lg:text-xl max-sm:h-[100px] max-md:h-[120px] max-lg:h-[150px] max-sm:p-0 max-md:p-0 max-lg:p-8">
+        <div class="flex justify-center">
+            <a class="p-4 h-[76px]" href="./index.html">Home</a>
+            <a class="p-4 h-[76px]" href="#">Contact me</a>
+            <a class="p-4 h-[76px]" href="./Trabajos.html">Works</a>
+        </div>
+        <div class="flex justify-end pr-8">
+            <span id="hour"></span>
+        </div>
+    </footer>
 </body>
+<script src="./watch.js"></script>
+<script src="./darkmode.js"></script>
 </html>
