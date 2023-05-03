@@ -4,7 +4,6 @@ setInterval(
     ()=>{
         let tiempo = new Date();
         hora.innerText = tiempo.toLocaleTimeString();
-        console.log(`${hora.toLocaleTimeString()}}`)
     }, 1000
 )
 

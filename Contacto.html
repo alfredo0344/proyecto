@@ -9,45 +9,80 @@
     <link rel="stylesheet" href="index.css">
     <link rel="shortcut icon" href="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/4379ea94-c866-4f3a-a5e6-34b4d116f2d8/d9td8pd-d8ccea13-3e1a-4aaa-ab23-5177da12b412.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzQzNzllYTk0LWM4NjYtNGYzYS1hNWU2LTM0YjRkMTE2ZjJkOFwvZDl0ZDhwZC1kOGNjZWExMy0zZTFhLTRhYWEtYWIyMy01MTc3ZGExMmI0MTIucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.wmyJp9A-kOQJGnmkgxH8uGlSnEBjCEUFO9Gw8_Zee88">
     <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
 </head>
 <body>
     <nav id="barra" class="bg-[#86cecb] justify-end flex h-[100px] pt-8 pr-4 text-[#e12885] text-3xl max-sm:text-sm  max-md:text-lg max-lg:text-xl max-sm:h-[50px] max-md:h-[60px] max-sm:pr-0 max-md:pr-0 max-sm:pt-4 max-md:pt-4 max-sm:justify-center max-md:justify-center">
-        <button id="botonTema" class="dark pr-8 h-[44px]"><img id="icon" class="pr-8 h-[44px]" src="./image/moonpng.parspng.com-3.png" alt=""></button>
+        <button id="botonTema" class="dark pr-8 h-[44px] max-sm:h-[6px]">
+            <img id="icon" class="pr-8 h-[44px] max-sm:h-[20px] max-md:h-[30px]" src="./image/moonpng.parspng.com-3.png" alt="">
+        </button>
         <a class="pr-8 h-[44px] max-sm:h-[6px]" href="./index.html">Home</a>
         <a class="pr-8 h-[44px]" href="#">Contact me</a>
         <a class="pr-8 h-[44px]" href="./Trabajos.html">Works</a>
     </nav>
     <div id="medio" class="text-[#373b3e] bg-[#bec8d1] h-screen flex flex-col items-center justify-center">
         <img id="fondo" class="object-cover absolute mix-blend-overlay animate__animated animate__jello" src="./image/mikuchibi.png" alt="">
-        <div class="container ml-auto mr-auto border flex flex-col content-center">
-                <div class="items-center flex flex-col justify-center">
-                    <p class="text-7xl">Alfredo Tartaret</p>
-                    <p class="text-3xl">Ingrese los datos para contactarme</p>
+        <div class="">
+                <div class="container ml-auto mr-auto flex flex-wrap items-start mt-8">
+                    <div class="w-full pl-2 pr-2 mb-4 mt-4">
+                        <p class="text-7xl max-sm:text-4xl text-center">Alfredo Tartaret</p>
+                        <p class="text-3xl max-sm:text-lg text-center">Ingrese los datos para contactarme</p>
+                    </div>
                 </div>
-            <div class="">
-                <form class=" mt-8 flex flex-col items-center gap-0.5" action="">
-                    <div class="mb-4">
-                        <label for="nombre">Nombre:</label>          
-                        <input type="text" id="nombre" name="nombre_usuario">
+                    <div id="gif" class="flex justify-center invisible h-[0px]">
+                        <lord-icon
+                        src="https://cdn.lordicon.com/sdhhsgeg.json"
+                        trigger="loop"
+                        delay="500"
+                        colors="primary:#4be1ec,secondary:#cb5eee"
+                        style="width:250px;height:250px">
+                    </lord-icon>
                     </div>
-                    <div>
-                        <label for="apellido">Apellido:</label>
-                        <input type="text" id="apellido" name="apellido_usuario">
-                    </div>
-                    <div>
-                        <label for="telefono">Telefono:</label>
-                        <input type="number" id="telefono" name="telefono_usuario">
-                    </div>
-                    <div>
-                        <label for="direccion">Direccion:</label>
-                        <input type="text" id="direccion" name="direccion_usuario">
-                    </div>
-                    <div>
-                        <label for="asunto">Asunto:</label>
-                      <textarea name="asunto_usuario" id="asunto"></textarea>
-                    </div>
-                    <button class="border" type="submit">Enviar</button>
-                </form>
+            <div class="container ml-auto mr-auto flex items-center justify-center">
+                <div class="w-full">
+
+                <!-- Formulario -->
+                    <form onsubmit="return false" id="formu" class="px-8 pt-6 pb-8 mb-4" >
+                        <div class="mb-4">
+                            <div class="grid grid-flow-row sm:grid-flow-col gap-3">
+                                <div class="sm:col-span-4 justify-center">
+                                    <label class="block text-sm font-bold mb-2" for="nombre">Nombre:</label>          
+                                    <input class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" type="text" id="nombre" name="nombre_usuario">
+                                    <span id="error1" class="errorinput invisible text-red-500">Solo puede contener letras</span>
+                                </div>
+                                <div class="sm:col-span-4 justify-center">
+                                    <label class="block text-sm font-bold mb-2" for="apellido">Apellido:</label>
+                                    <input class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" type="text" id="apellido" name="apellido_usuario">
+                                    <span id="error2" class="errorinput invisible text-red-500">Solo puede contener letras</span>
+                                </div>
+                                <div class="sm:col-span-4 justify-center">
+                                    <label class="block text-sm font-bold mb-2" for="telefono">Email:</label>
+                                    <input class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" type="text" id="email" name="email_usuario">
+                                    <span id="error3" class="errorinput invisible text-red-500">Debe ser una direccion email valida</span>
+                                </div>
+                                <div class="sm:col-span-4 justify-center">
+                                    <label class="block text-sm font-bold mb-2" for="telefono">Telefono:</label>
+                                    <input class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" type="text" id="telefono" name="telefono_usuario">
+                                    <span id="error4" class="errorinput invisible text-red-500">Solo se aceptan numeros en formato 1234-123-12-12</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-sm font-bold mb-2" for="direccion">Direccion:</label>
+                            <input class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" type="text" id="direccion" name="direccion_usuario">
+                            <span id="error5" class="errorinput invisible text-red-500">Por favor evita usar estos caracteres: &#60, &#62, &#61, &#47, &#92, &#91, &#93, &#123, &#125, &#38 </span>
+                        </div>
+                        <div class="mb-4">
+                            <label class="block text-sm font-bold mb-2" for="asunto">Mensaje:</label>
+                            <textarea class="shadow appearance-none border rounded w-full py-2 px-3 leading-tight focus:outline-none focus:shadow-outline" name="Mensaje_usuario" id="mensaje"></textarea>
+                            <span id="error6" class="errorinput invisible text-red-500">Por favor evita usar estos caracteres: &#60, &#62, &#61, &#47, &#92, &#91, &#93, &#123, &#125, &#38 </span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <button id="enviar" class="bg-blue-300 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">Enviar</button>
+                            <span id="error7" class="max-sm:text-sm errorinput invisible text-red-500">Uno de los campos es erroneo, por favor revisar</span>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
@@ -65,4 +100,5 @@
 </body>
 <script src="./watch.js"></script>
 <script src="./darkmode.js"></script>
+<script src="./validacion.js"></script>
 </html>
