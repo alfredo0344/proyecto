@@ -104,12 +104,12 @@ function isvalidmensaje(){
 
 function enviarinfo(){
     if(estado && estado1 && estado2 && estado3 && estado4 && estado5 == true){
-        setInterval(
+        setTimeout(
             ()=>{
                 gif.classList.remove("invisible");
                 formu.classList.add("invisible");
                 
-                setInterval(
+                setTimeout(
                     ()=>{
                         window.location.assign("./index.html")
                     },2000
